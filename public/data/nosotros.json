@@ -3,7 +3,7 @@
         "id": 1,
         "nombre": "Gerardo Lamadrid",
         "email": "gerardolamadrid@gmail.com",
-        "Puesto": "CEO",
+        "puesto": "CEO",
         "foto": "/images/Avatar1.png"
     },
 
@@ -11,7 +11,7 @@
         "id": 2,
         "nombre": "Julio Rodríguez",
         "email": "juliorodriguez@gmail.com",
-        "Puesto": "Directivo",
+        "puesto": "Directivo",
         "foto": "/images/Avatar2.png"
     },  
 
@@ -19,7 +19,7 @@
         "id": 3,
         "nombre": "Sofía Perez",
         "email": "sofiaperez@gmail.com",
-        "Puesto": "UX/UI Designer",
+        "puesto": "UX/UI Designer",
         "foto": "/images/Avatar3.png"
     }
 ]

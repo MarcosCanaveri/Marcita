@@ -1,5 +1,3 @@
-
-
 function TarjetaProducto({ imagen, nombre, precio }) {
     return (
         <div>

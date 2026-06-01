@@ -1,35 +1,30 @@
-import { Layout } from "./componentes/Layout/Layout.jsx";
-import TarjetaProducto from "./componentes/TarjetaProductos/TarjetaProducto.jsx";
-import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer.jsx";
-import { Contador } from "./componentes/Contador/Contador.jsx";
-import { Contar } from "./componentes/Contar/Contar.jsx";
-import { Productos } from "./componentes/Productos/Productos.jsx";
+import Layout from "./componentes/Layout/Layout";
+import ItemListContainer from "./componentes/ItemListContainer/ItemListContainer";
+import Productos from "./componentes/Productos/Productos";
+
+
 
 function App() {
 
   return (
-    <>
-      <Layout>
-        <h2>Productos destacados</h2>
-        < Contar />
-        < Contador />
-        < Productos />
-        <ItemListContainer Mensaje="Bienvenido a nuestra tienda de joyas" />
-        <TarjetaProducto
-        imagen="Producto1.jpg"
-        nombre="Producto 1"
-        precio={19.99}
-        />
+    <Layout>
+      <h2>Productos destacados</h2>
 
-        <TarjetaProducto
-        imagen="Producto2.jpg"
-        nombre="Producto 2"
-        precio={29.99}
-        />
+      <Productos Mensaje="Nuestros productos más populares" />
 
-      </Layout>
-    </>
-  )
+      
+      
+      <ItemListContainer Mensaje="Bienvenidos a Marcita Joyas" />
+
+      <h2>Conoce a nuestro equipo</h2>
+
+      
+
+
+    </Layout>
+  
+
+  );
 }
 
 export default App

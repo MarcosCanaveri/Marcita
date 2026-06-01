@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import TarjetaContacto from "./TarjetaContacto";
 
 function Directorio() {
     const [contactos, setContactos] = useState([]);
@@ -6,7 +7,7 @@ function Directorio() {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        fetch("/data/nosotros.json")
+        fetch('/data/nosotros.json')
             .then(res => {
                 if (!res.ok) 
                     throw new Error("Error de carga");

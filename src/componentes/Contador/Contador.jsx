@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-export function Contador() {
+function Contador() {
     const [contador, setContador] = useState(0);
 
     const incrementar = () => {
@@ -19,3 +17,4 @@ export function Contador() {
         </div>
     );
 }
+

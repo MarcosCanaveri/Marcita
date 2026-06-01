@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 
-export function Productos({Mensaje}) {
+function Productos({Mensaje}) {
     const [productos, setProductos] = useState([]);
     const [error, setError] = useState(null);
     const [cargando, setCargando] = useState(true);
 
     useEffect(() => {
-        fetch("/data/productos.json")
+        fetch('/data/productos.json')
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Error al cargar los productos");
@@ -25,11 +25,11 @@ export function Productos({Mensaje}) {
     }, []);
 
     if (cargando) {
-        return <div>Cargando productos...</div>;
+        return <p>Cargando productos...</p>;
     }
 
     if (error) {
-        return <div>Error: {error}</div>;
+        return <p>Error: {error}</p>;
     }
 
     return (
@@ -39,7 +39,7 @@ export function Productos({Mensaje}) {
                 {productos.map((producto) => (
                     <li key={producto.id}>
                         <h3>{producto.nombre}</h3>
-                        <p>Precio: ${producto.precio.toFixed(2)}</p>
+                        <p>Precio: ${producto.precio}</p>
                         <p>Stock: {producto.stock}</p>
                     </li>
                 ))}
@@ -47,3 +47,5 @@ export function Productos({Mensaje}) {
         </div>
     );
 }
+
+export default Productos;

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function Contar() {
+function Contar() {
     const [contador, setContador] = useState(0);
 
     useEffect(() => {
@@ -15,3 +15,5 @@ export function Contar() {
         </div>
     );
 }
+
+export default Contar;
