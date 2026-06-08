@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import TarjetaProducto from '/src/componentes/TarjetaProductos/TarjetaProducto';
 
 function Productos({Mensaje}) {
     const [productos, setProductos] = useState([]);
@@ -41,6 +42,12 @@ function Productos({Mensaje}) {
                         <h3>{producto.nombre}</h3>
                         <p>Precio: ${producto.precio}</p>
                         <p>Stock: {producto.stock}</p>
+                        <TarjetaProducto 
+                            imagen={producto.imagen}
+                            nombre={producto.nombre}
+                            precio={producto.precio}
+                            stock={producto.stock}
+                        />
                     </li>
                 ))}
             </ul>

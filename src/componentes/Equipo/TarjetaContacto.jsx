@@ -1,4 +1,5 @@
 function TarjetaContacto({ nombre, email, puesto, foto }) {
+
     return (
         <div>
             <img src={foto} alt={nombre} />
