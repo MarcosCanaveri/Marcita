@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Inicio from "./componentes/Inicio/inicio";
 import ProductoDetalle from "./componentes/ProductoDetalle/ProductoDetalle";
 import Cart from "./componentes/Cart/Cart";
+import ProductosBD from "./componentes/ProductosBD/ProductosBD";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/contacto" element={<ItemListContainer Mensaje="Bienvenidos a Marcita Joyas" />} />
         <Route path="/sobre-nosotros" element={<h2>Conoce a nuestro equipo</h2>} />
         <Route path="/carrito" element={<Cart />} />
+        <Route path="/productosBD" element={<ProductosBD />} />
 
       </Route>
 

@@ -14,7 +14,7 @@ function Item({ id, nombre, precio, imagen, stock }) {
 
     const [ cantidad, setCantidad ] = useState(0);
 
-    const { addToCart } = useCart();
+    const { addToCart, getCantidadActual } = useCart();
 
     const handleAddToCart = () => {
         if (cantidad > 0) {
@@ -34,7 +34,10 @@ function Item({ id, nombre, precio, imagen, stock }) {
         }
     };
 
+    const cantidadActual = getCantidadActual(producto.id);
+
     return (
+        <div>
         <div>
             <h3>{nombre}</h3>
             <p>Precio: ${precio}</p>
@@ -51,6 +54,8 @@ function Item({ id, nombre, precio, imagen, stock }) {
                 {esFavorito ? "⭐" : "☆"}
                 
             </span>
+            </div>
+           <h3>Cantidad en el carrito: {cantidadActual}</h3>
         </div>
     );
 }
